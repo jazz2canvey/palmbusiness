@@ -12,12 +12,12 @@ public class DatabaseFuntions {
 		
 		try{  
 			Class.forName("com.mysql.jdbc.Driver");  
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/palm_business","root","");  
-			return con;			
+			return DriverManager.getConnection("jdbc:mysql://localhost:3306/palm_business","nutan","tech");
+			//return DriverManager.getConnection("jdbc:mysql://localhost:3306/palm_business","","");
 		}
-			catch(Exception e) { 
-				System.out.println(e);
-			}  
+			catch(Exception e) {
+				e.printStackTrace();
+			}
 	
 		return null;		
 	}
